@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FloraBloom - Магазин цветов</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    body { font-family: 'Helvetica Neue', sans-serif; }
+    h1, h2, h3 { font-weight: 500; }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <!-- Hero -->
+  <header class="bg-white text-center py-24" data-aos="fade-down">
+    <h1 class="text-4xl md:text-5xl mb-4">FloraBloom</h1>
+    <p class="text-lg text-gray-600">Свежие цветы с доставкой по городу</p>
+    <a href="#contact" class="mt-6 inline-block px-6 py-2 border border-gray-800 text-gray-800 rounded hover:bg-gray-100 transition">Заказать букет</a>
+  </header>
+
+  <!-- Каталог -->
+  <section id="catalog" class="py-20" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl mb-12 text-center">Каталог букетов</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 border rounded" data-aos="zoom-in">
+          <h3 class="text-xl mb-2">Розы</h3>
+          <p class="text-gray-600">от 1500 ₽</p>
+        </div>
+        <div class="p-6 border rounded" data-aos="zoom-in" data-aos-delay="100">
+          <h3 class="text-xl mb-2">Тюльпаны</h3>
+          <p class="text-gray-600">от 1200 ₽</p>
+        </div>
+        <div class="p-6 border rounded" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="text-xl mb-2">Авторский букет</h3>
+          <p class="text-gray-600">от 2000 ₽</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- О нас -->
+  <section id="about" class="py-20 bg-gray-50" data-aos="fade-right">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl mb-6">О FloraBloom</h2>
+      <p class="text-gray-700 leading-relaxed">Мы создаем лаконичные, стильные букеты с душой. Работаем с лучшими поставщиками и доставляем вовремя.</p>
+    </div>
+  </section>
+
+  <!-- Галерея -->
+  <section id="portfolio" class="py-20" data-aos="fade-left">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-3xl mb-12">Наши букеты</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <!-- изображения букетов -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact" class="py-20 bg-gray-50" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-4 md:flex md:justify-between gap-8">
+      <form class="md:w-1/2 space-y-4">
+        <h2 class="text-2xl mb-4">Оформить заказ</h2>
+        <input type="text" placeholder="Ваше имя" class="w-full p-3 border border-gray-300 rounded">
+        <input type="tel" placeholder="Телефон" class="w-full p-3 border border-gray-300 rounded">
+        <input type="text" placeholder="Какой букет вы хотите?" class="w-full p-3 border border-gray-300 rounded">
+        <button class="w-full border border-gray-800 text-gray-800 py-3 rounded hover:bg-gray-100 transition">Отправить</button>
+      </form>
+      <div class="md:w-1/2 mt-12 md:mt-0">
+        <h2 class="text-2xl mb-4">Контакты</h2>
+        <p class="text-gray-700">📍 г. Москва, Цветочная ул., д.5</p>
+        <p class="text-gray-700">📞 +7 (900) 123-45-67</p>
+        <div id="map" class="mt-4 w-full h-64"></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=ВАШ_КЛЮЧ"></script>
+  <script>
+    function initMap() {
+      new google.maps.Map(document.getElementById('map'), {center:{lat:55.7558, lng:37.6176}, zoom:15});
+    }
+    initMap();
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>
